@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <title>Εξέταση TRUE/FALSE — KUMITE &amp; KATA</title>
+  <meta name="description" content="Εκπαιδευτική εφαρμογή εξέτασης TRUE/FALSE για KUMITE και KATA." />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="theme-color" content="#000080" />
+</head>
+<body>
+  <a class="visually-hidden" href="#app-root">Μετάβαση στο περιεχόμενο</a>
+  <div id="offline-banner" class="offline-banner" role="status" hidden>
+    Λειτουργία εκτός σύνδεσης (offline) — χρησιμοποιούνται αποθηκευμένα δεδομένα.
+  </div>
+
+  <main id="app-root" aria-live="polite"></main>
+
+  <noscript>
+    <div class="protocol-warning">
+      Αυτή η εφαρμογή απαιτεί JavaScript για να λειτουργήσει. Παρακαλώ ενεργοποιήστε το JavaScript στον browser σας.
+    </div>
+  </noscript>
+
+  <!-- SheetJS, bundled locally (no CDN dependency at runtime, spec section 6) -->
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
