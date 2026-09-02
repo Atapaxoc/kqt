@@ -139,11 +139,14 @@ select:focus-visible,
   top: 0;
   height: 100%;
   width: min(42%, 480px);
-  object-fit: cover;
+  max-height: 100%;
+  object-fit: contain;
   object-position: left center;
   z-index: 0;
   pointer-events: none;
-  /* "δεν θα θαμπώνει" -> no blur/opacity change, colors unaltered */
+  /* "δεν θα θαμπώνει, θα εμφανίζεται με τα χρώματα της αναλλοίωτα":
+     contain (never cover) guarantees the WHOLE image is always visible,
+     never cropped in half, regardless of the viewport's aspect ratio. */
   filter: none;
   opacity: 1;
 }
